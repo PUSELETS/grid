@@ -3,7 +3,6 @@
 }
 body {
   display: flex;
-  overflow: hidden;
 }
 .box {
   background-color: blue;
