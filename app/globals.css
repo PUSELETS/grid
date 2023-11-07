@@ -10,7 +10,7 @@ body {
 .grid {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat( auto-fit, minmax(100px, 1fr));
+  grid-template-columns: repeat( auto-fit, 1fr);
   width: 100%;
   grid-auto-rows: 50px;
 
