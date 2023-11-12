@@ -1,9 +1,13 @@
-import { Inter } from 'next/font/google'
+import { Roboto_Slab } from 'next/font/google'
 import './globals.css'
 import { StateContext } from './context/StateContext'
 import Navber from './components/Navber'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Roboto_Slab({ 
+  subsets: ['latin'],
+  weight: '300',
+  style : "normal"
+ })
 
 export const metadata = {
   title: 'Create Next App',
