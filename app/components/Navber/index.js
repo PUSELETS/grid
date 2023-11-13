@@ -27,23 +27,27 @@ export default function Navber() {
 
   return (
     <div className='navbar-container'>
-         <div className='head'>Food</div>
-         <div 
-            onClick={()=> setMenuNav(!menuNav)}
+         <h3 className='head'>Food</h3>
+         <section 
+            onClick={()=> {
+                setMenuNav(!menuNav);
+            }}
             className='toggle-bar'
 
          >
             <span className='bar'></span>
             <span className='bar'></span>
             <span className='bar'></span>
-         </div>
-         <ul className={menuNav? "open" : ""}>
+         </section>
+         <div className='wrap'>
+          <ul className='ul'>
             <li><Link className='a' href={'/'}>Fruits</Link></li>
             <li><Link className='a' href={'/'}>Vagetable</Link></li>
             <li><Link className='a' href={'/'}>Nuddles</Link></li>
             <li><Link className='a' href={'/'}>Bugger</Link></li>
             <li><Link className='a' href={'/'}>Beef</Link></li>
-         </ul>
+          </ul>
+         </div>
     </div>
     
   );

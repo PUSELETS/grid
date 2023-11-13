@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&family=Roboto+Slab&display=swap');
 
 *{
   box-sizing: border-box;
@@ -25,11 +24,7 @@ body {
   top: 0;
 }
 
-.box {
-  background-color: blue;
-}
-
-.navbar-container ul{
+.ul{
   margin: 0;
   padding: 0;
   display: flex;
@@ -81,31 +76,37 @@ body {
     flex-direction: column;
     align-items: flex-start;
   }
-  .navbar-container ul {
-    display: none;
+  .ul {
+    padding: 1rem;
+    display: flex;
+    overflow: hidden;
     width: 100%;
+    height: 100%;
     flex-direction: column;
     gap: 0;
+    
   }
-  .navbar-container ul li{
+  .ul li{
     text-align: center;
   }
-  .navbar-container ul.open{
-    display: flex;
+  
+   .wrap{
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 500ms ease-out;
+    width: 100%;
   }
+  .wrap:hover{
+    grid-template-rows: 1fr;
+  }
+  
+  
 }
 
-.grid {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat( auto-fill, minmax(75px, 1fr));
-  width: 100%;
-  grid-auto-rows: 50px;
-
-}
 
 .flex{
   display: flex;
   justify-content: space-between;
   margin: 6px 18px;
 }
+
