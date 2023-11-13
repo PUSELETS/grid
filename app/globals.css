@@ -1,12 +1,15 @@
 
 *{
   box-sizing: border-box;
+  color: white;
 }
 
 body {
   margin: 0;
   overflow-x: hidden;
   padding: 0;
+  background-color: white;
+  color: white;
 }
 
 .head{
@@ -20,6 +23,7 @@ body {
   align-items: center;
   background-color: #333;
   color: white;
+  border-radius: 10px bottom;
   position: sticky;
   top: 0;
 }
@@ -33,6 +37,7 @@ body {
 
 .navbar-container ul li:hover{
   background-color: #555;
+  border-radius: 20px;
   cursor: pointer;
 }
 
@@ -84,6 +89,7 @@ body {
     height: 100%;
     flex-direction: column;
     gap: 0;
+    color: black;
     
   }
   .ul li{
