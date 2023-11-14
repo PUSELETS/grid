@@ -1,9 +1,11 @@
 "use client"
 import { useStateContext } from '@/app/context/StateContext' 
 import { useState } from 'react'
+import useMeasure from 'react-use-measure'
 import { navOption } from '@/app/utils'
 import React from 'react'
 import Link from 'next/link'
+import { MotionConfig, motion } from 'framer-motion'
 
 
 function NavItem(){
@@ -24,9 +26,11 @@ function NavItem(){
 export default function Navber() {
 
     const [menuNav, setMenuNav] = useState(false);
+    const [ref , {height}] = useMeasure()
 
   return (
-    <div className='navbar-container'>
+    <MotionConfig transition={{duration: 0.2}}>
+        <div className='navbar-container'>
          <h3 className='head'>Food</h3>
          <section 
             onClick={()=> {
@@ -39,16 +43,22 @@ export default function Navber() {
             <span className='bar'></span>
             <span className='bar'></span>
          </section>
-         <div className='wrap'>
-          <ul className='ul'>
+          <motion.div
+          animate={{height}}
+          className='motion'
+          >
+          <ul
+          ref={ref}
+          className={menuNav? "open" : ""}
+          >
             <li><Link className='a' href={'/'}>Fruits</Link></li>
             <li><Link className='a' href={'/'}>Vagetable</Link></li>
             <li><Link className='a' href={'/'}>Nuddles</Link></li>
             <li><Link className='a' href={'/'}>Bugger</Link></li>
             <li><Link className='a' href={'/'}>Beef</Link></li>
           </ul>
-         </div>
-    </div>
-    
+          </motion.div>
+        </div>
+    </MotionConfig>
   );
 }
